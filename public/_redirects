@@ -5,7 +5,7 @@
 # permanent redirect
 /map/zmap /work/zmap 301
 /map/zmap.html /work/zmap 301
-/tmp/AE_PerlIsm.html /doc/AE_PerlIsm 301
-/tmp/unicode-steganography.html /work/unicode-steganography 301
 /orbited/twitter.html /work/twitter-stream 301
 /tcp/twitter.html /work/twitter-stream 301
+/tmp/AE_PerlIsm.html /doc/AE_PerlIsm 301
+/tmp/unicode-steganography.html /work/unicode-steganography 301
