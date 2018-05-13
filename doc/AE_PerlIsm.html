@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About @AE_PerlIsm</title>
+<style>
+body { font-family: sans-serif; margin: 45px 30px }
+h1, h2 { font-weight: normal }
+h2 { margin: 2em 0 .8em }
+p { margin: 1em }
+</style>
+<link rel="author" href="http://hidekiy.com/">
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WV6MQS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WV6MQS');</script>
+<!-- End Google Tag Manager -->
+
+<h1>About @AE_PerlIsm</h1>
+<h2>概要</h2>
+<p>Twitter Streaming API に <a href="http://search.cpan.org/perldoc?AnyEvent">AnyEvent</a> 経由でアクセスし、Perl などのキーワードを含む発言を即時的に公式リツイートするボットです。</p>
+<p>リツイートされないようにするには <a href="https://twitter.com/AE_PerlIsm">@AE_PerlIsm</a> をブロックしてください。</p>
+<p>ただ今 Protected にて運用中です。フォローリクエストは通常 24 時間以内に全て承認します。</p>
+<h2>動作詳細</h2>
+<ul>
+<li>非公式リツイートはリツイートしません。</li>
+<li>同じユーザーの連続した発言は適当に無視します。</li>
+<li>URL を取り除いたあとの内容の似た発言は一定時間無視します。</li>
+<li>謎スパムフィルターによりスパムと判定された場合はリツイートしません。</li>
+</ul>
+<h2>謝辞</h2>
+<p>@AE_PerlIsm は以下の素晴らしい CPAN モジュールのおかげで動いています。</p>
+<ul>
+<li><a href="http://search.cpan.org/perldoc?AnyEvent::Twitter::Stream">AnyEvent::Twitter::Stream</a></li>
+<li><a href="http://search.cpan.org/perldoc?Coro">Coro</a></li>
+<li><a href="http://search.cpan.org/perldoc?OAuth::Lite::Consumer">OAuth::Lite::Consumer</a></li>
+<li><a href="http://search.cpan.org/perldoc?String::Similarity">String::Similarity</a></li>
+</ul>
+<p><a href="https://www.heroku.com/">Heroku</a> により安定してホストされています。</p>
+<h2>問い合わせ先</h2>
+<p><a href="https://twitter.com/hidekiy">@hidekiy</a></p>
+<p style="text-align:right"><a href="http://hidekiy.com/">hidekiy.com</a></p>
+</body>
+</html>

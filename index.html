@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320">
+    <title>Hideki Yamamura [hidekiy.com]</title>
+    <style>
+    html, body { height: auto }
+    a > img { border: 0 }
+    body > div { opacity: 0.85 }
+    html, body { margin: 0 }
+    div { margin: 30px 0 }
+    h1, h2, p, ul, li { margin: .6em 0 }
+    body { padding-left: 50px }
+    @media screen and (max-width: 320px) {
+        body { padding-left: 5px }
+    }
+    ul { padding: 0 0 0 .5em }
+    body { font: 16px/1.4 Verdana, sans-serif }
+    h1, h2 { font-weight: normal }
+    h1 { font-size: 50px }
+    h2 { font-size: 20px }
+    ul { list-style: none }
+    body, a { color: #333 }
+    body { background: #fff url(https://bgimg-3746.herokuapp.com/img) }
+    a {
+        border-radius: 3px;
+        background: #fff;
+    }
+    #contactMe, #activity li {
+        border-radius: 6px;
+        background: #fff;
+    }
+    #contactMe {
+        font-size: 16px;
+        margin: 10px 0;
+        padding: 10px;
+    }
+    #activity li {
+        list-style: none;
+        padding: 10px;
+    }
+    #enableHttps {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        margin: 0;
+        font-size: 12px;
+    }
+    #flashAlert {
+        display: none;
+        background: #ffc0cb;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+    }
+    #flashAlert a { background: transparent }
+    .activityItemFooter {
+        font-size: 10px;
+        text-align: right;
+        margin: 5px 0 0 0;
+    }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WV6MQS');</script>
+    <!-- End Google Tag Manager -->
+    <link rel="author" href="https://plus.google.com/+HidekiYamamura">
+    <link rel="canonical" href="https://hidekiy.com/">
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV6MQS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div>
+        <h1>hidekiy.com</h1>
+        <p>Welcome to the personal page of Hideki Yamamura!</p>
+    </div>
+
+    <div id="contents">
+        <h2>Contents</h2>
+        <ul>
+            <li><a href="https://blog.hidekiy.com/" rel="me">hidekiy blog</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Works</h2>
+        <ul>
+            <li><a href="/work/zmap">zmap</a> displays all zoom layers synchronously on Google Map.</li>
+            <li><a href="https://allow-any-origin.appspot.com/">allow-any-origin.appspot.com</a> XHR Lv.2 Public Proxy.</li>
+            <li><a href="https://twitterstream-9736.herokuapp.com/">twitter live streaming</a></li>
+            <li><a href="https://ptyapp.com/">ptyapp.com</a> tiny web applications</li>
+            <li><a href="https://anymash.ptyapp.com/">AnyMash</a> like FaceMash</li>
+            <li><a href="https://clicker.ptyapp.com/">virtual clicker</a> realtime web-based enquete system.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>My Accounts</h2>
+        <ul>
+            <li>
+                <a href="https://twitter.com/hidekiy" rel="me">Twitter</a>
+                <a href="https://www.facebook.com/hideki.yamamura" rel="me">Facebook</a>
+                <a href="https://plus.google.com/+HidekiYamamura" rel="me">Google+</a>
+                <a href="https://hidekiy.tumblr.com/" rel="me">Tumblr</a>
+                <a href="https://www.youtube.com/user/hideki536" rel="me">YouTube</a>
+                <a href="https://github.com/hidekiy" rel="me">GitHub</a>
+                <a href="https://www.alltrails.com/members/hideki-yamamura/activity" rel="me">AllTrails</a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>About this site</h2>
+        <ul>
+            <li>Hosted by <a href="https://www.star-domain.jp/">StarDomain</a> <a href="https://status.hidekiy.com/"><img src="https://www.statuscake.com/App/button/index.php?Track=AQBhb2zj4K&amp;Days=1000&amp;Design=6" alt="Monitoring Status" width="96" height="15"></a></li>
+
+            <li><p><a id="contact" href="#">Contact me</a></p>
+                <p id="contactMe" style="display:none">Please feel free to contact me<br>
+                    <br>
+                    Twitter: <a href="https://twitter.com/hidekiy">@hidekiy</a><br>
+                    Facebook: <a href="https://www.facebook.com/hideki.yamamura">Hideki Yamamura</a><br>
+                </p>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    /*jslint browser: true */
+    (function() {
+        'use strict';
+        var $ = window.jQuery;
+
+        (function main() {
+            $('#contact').click(function() {
+                $('#contactMe').toggle();
+                return false;
+            });
+        }());
+    }());
+    </script>
+</body>
+</html>

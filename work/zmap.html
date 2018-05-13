@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>zmap</title>
+<style>
+body {
+	margin: 0;
+}
+
+a {
+	color: #666;
+}
+
+.map_canvas {
+	border: #666 1px;
+	border-style: none solid solid none;
+	width: 400px;
+	height: 300px;
+	float: left;
+}
+
+.grayout {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+	background: black;
+
+	opacity: 0.50;
+}
+
+#attr {
+	text-align: right;
+	clear: both;
+	font-size: 9px;
+	color: #aaa;
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-WV6MQS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WV6MQS');</script>
+<!-- End Google Tag Manager -->
+
+<div id="container"></div>
+<p id="attr">Designed and programmed by <a href="http://hidekiy.com/" rel="author">hidekiy.com</a>.</p>
+<script src="https://www.google.com/jsapi"></script>
+<script src="https://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+<script src="zmap.js"></script>
+</body>
+</html>

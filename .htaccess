@@ -1,0 +1,33 @@
+# /foo/bar to /foo/bar.html
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_URI} /[^./]+$
+RewriteRule (.*) $1.html
+
+# redirect
+Redirect permanent /tmp/AE_PerlIsm.html http://hidekiy.com/doc/AE_PerlIsm
+Redirect permanent /tmp/unicode-steganography.html http://hidekiy.com/work/unicode-steganography
+Redirect permanent /orbited/twitter.html http://hidekiy.com/work/twitter-stream
+Redirect permanent /tcp/twitter.html http://hidekiy.com/work/twitter-stream
+Redirect permanent /map/zmap http://hidekiy.com/work/zmap
+Redirect permanent /map/zmap.html http://hidekiy.com/work/zmap
+
+# error docs
+ErrorDocument 403 /error/403.html
+ErrorDocument 404 /error/404.html
+
+# mod_headers
+Header set X-Content-Type-Options nosniff
+Header set X-Frame-Options SAMEORIGIN
+Header set X-UA-Compatible IE=edge
+Header set X-XSS-Protection 1;mode=block
+<Files ok.txt>
+	Header set Cache-Control max-age=0
+</Files>
+
+# mod_mime
+AddCharset utf-8 .css .html .js
+AddType application/javascript .js
+
+# mod_deflate
+AddOutputFilterByType DEFLATE application/javascript text/css text/html text/plain

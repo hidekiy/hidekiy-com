@@ -1,0 +1,15 @@
+body {
+	margin: 20px 0;
+	font: 16px/1.4 Verdana, sans-serif;
+	text-align: center;
+	background: #fff url(//bgimg-3746.herokuapp.com/img);
+}
+
+body,
+a { color: #4c4c4c }
+
+h1 {
+	font-weight: normal;
+	font-size: 4em;
+	margin: 100px 0;
+}
