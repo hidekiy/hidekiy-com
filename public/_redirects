@@ -1,7 +1,6 @@
-# permanent redirect
-/map/zmap /work/zmap 301
-/map/zmap.html /work/zmap 301
-/orbited/twitter.html /work/twitter-stream 301
-/tcp/twitter.html /work/twitter-stream 301
-/tmp/AE_PerlIsm.html /doc/AE_PerlIsm 301
-/tmp/unicode-steganography.html /work/unicode-steganography 301
+/map/zmap /work/zmap
+/map/zmap.html /work/zmap
+/orbited/twitter.html /work/twitter-stream
+/tcp/twitter.html /work/twitter-stream
+/tmp/AE_PerlIsm.html /doc/AE_PerlIsm
+/tmp/unicode-steganography.html /work/unicode-steganography
