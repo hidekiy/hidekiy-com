@@ -14,9 +14,11 @@ ul { list-style: none }
 body, a { color: #333 }
 body { background: #fff url(https://bgimg-3746.herokuapp.com/img) }
 a {
+    text-decoration: underline;
     border-radius: 3px;
     background: #fff;
 }
+h1 a { text-decoration: none }
 
 /* PC */
 @media screen and (min-width: 480px) {
