@@ -1,3 +1,8 @@
 /*
-  X-Frame-Options: DENY
-  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: SAMEORIGIN
+  X-UA-Compatible: IE=edge
+  X-XSS-Protection: 1;mode=block
+
+/ok.txt
+  Cache-Control: max-age=0
