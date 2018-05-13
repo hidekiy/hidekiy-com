@@ -1,7 +1,3 @@
-# alias
-/doc/* /doc/*.html
-/work/* /work/*.html
-
 # permanent redirect
 /map/zmap /work/zmap 301
 /map/zmap.html /work/zmap 301
