@@ -1,5 +1,5 @@
 /*
   X-Content-Type-Options: nosniff
-  X-Frame-Options: SAMEORIGIN
+  X-Frame-Options: DENY
   X-UA-Compatible: IE=edge
-  X-XSS-Protection: 1;mode=block
+  X-XSS-Protection: 1; mode=block
