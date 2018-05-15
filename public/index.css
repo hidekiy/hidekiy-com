@@ -12,7 +12,7 @@ h1 { font-size: 50px }
 h2 { font-size: 20px }
 ul { list-style: none }
 body, a { color: #333 }
-body { background: #fff url(https://bgimg-3746.herokuapp.com/img) }
+body { background: #fff url(bgimg/img) }
 a {
     text-decoration: underline;
     border-radius: 3px;

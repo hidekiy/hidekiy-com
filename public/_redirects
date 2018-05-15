@@ -1,7 +1,8 @@
-http://hidekiy.com/* https://hidekiy.com/:splat 301!
+/bgimg/* https://bgimg-3746.herokuapp.com/:splat 200
 /map/zmap /work/zmap
 /map/zmap.html /work/zmap
 /orbited/twitter.html /work/twitter-stream
 /tcp/twitter.html /work/twitter-stream
 /tmp/AE_PerlIsm.html /doc/AE_PerlIsm
 /tmp/unicode-steganography.html /work/unicode-steganography
+http://hidekiy.com/* https://hidekiy.com/:splat 301!
