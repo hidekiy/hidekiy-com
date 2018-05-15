@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 html, body { height: auto }
 a > img { border: 0 }
 body > div { opacity: 0.85 }
