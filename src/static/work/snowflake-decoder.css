@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+body, textarea, pre {
+    font: 12px/1.4 Verdana, sans-serif
+}
+
+body, a {
+    color: #4c4c4c
+}
+
+h1 {
+    font-weight: normal
+}

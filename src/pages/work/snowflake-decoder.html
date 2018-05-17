@@ -1,0 +1,19 @@
+{{#> layouts/base title="snowflake decoder" }}
+{{#*inline "head-block"}}
+    <link rel="stylesheet" href="snowflake-decoder.css">
+{{/inline}}
+{{#*inline "hero-block"}}
+    <h1>snowflake decoder</h1>
+    <div>
+    <label>Input:<br>
+    <textarea style="width:80%; height:150px">https://twitter.com/hidekiy/status/154166667973361664
+    </textarea></label><br>
+    <input type="button" value="decode">
+    </div>
+    <div id="result"></div>
+    <p style="text-align:right"><a href="http://hidekiy.com/" rel="author">hidekiy.com</a></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+    <script src="bignumber.js"></script>
+    <script src="snowflake-decoder.js"></script>
+{{/inline}}
+{{/layouts/base}}

@@ -1,0 +1,26 @@
+{{#> layouts/base title="Unicode ZWC Steganography" }}
+{{#*inline "head-block"}}
+    <link rel="stylesheet" href="unicode-steganography.css">
+{{/inline}}
+{{#*inline "hero-block"}}
+    <h1>Unicode ZWC Steganography</h1>
+
+    <p>埋め込む数字: <input type="text" id="num" value=""> <input type="button" value="update"></p>
+
+    <h2>元の文</h2>
+    <p><label>Input:<br><textarea id="input">1984年、ISOの文字コード規格委員会 (ISO/TC 97/SC2) は文字セットの切り替えを行わずに世界中の文字を単一の文字集合として扱える文字コード規格 (ISO 10646) を作成することを決定し、専門の作業グループ (ISO/TC 97/SC 2/WG 2) を設置し、作業を始めていた。1980年代後半にはこの作業グループにおいてさまざまな提案が検討されている。1990年になって出来あがったISO/TC 97/SC 2/WG 2作成のISO 10646の初版ドラフトDIS (Draft International Standard) では、漢字コードは32bitで表現され、各国の漢字コードはそのまま入れることになった。しかし中国は漢字を各国でばらばらに符号化するのではなく、あくまで統一して扱うことを求めてこのドラフトには当初から反対しており、今後の漢字コードの方針を決めるため、WG 2は CJK-JRG (Joint Research Group) と呼ばれるグループを別途設置し、そこで引き続き検討することにした</textarea></label><br>
+    <input type="button" value="encode"></p>
+
+    <h2>埋め込み済みテキスト</h2>
+    <p id="embedded"></p>
+
+    <h2>デコーダ</h2>
+    <p><label>Decode Target:<br>
+    <textarea id="decoder"></textarea></label><br>
+    <input type="button" value="decode">
+    </p>
+    <p style="text-align:right"><a href="http://hidekiy.com/" rel="author">hidekiy.com</a></p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+    <script src="unicode-steganography.js"></script>
+{{/inline}}
+{{/layouts/base}}

@@ -1,15 +1,13 @@
 'use strict';
 const gulp = require('gulp');
 const handlebars = require('gulp-compile-handlebars');
-const rename = require('gulp-rename');
 
 gulp.task('handlebars', () => {
-    return gulp.src('src/pages/**/*.hbs')
+    return gulp.src('src/pages/**/*.html')
         .pipe(handlebars({}, {
         	ignorePartials: true,
         	batch : ['src/partials'],
         }))
-        .pipe(rename({extname: '.html'}))
         .pipe(gulp.dest('dist'));
 });
 

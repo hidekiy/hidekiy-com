@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+body {
+    font: 16px/1.4 sans-serif;
+}
+
+textarea {
+    font: 16px/1.4 sans-serif;
+    width: 90%;
+    height: 150px;
+}
