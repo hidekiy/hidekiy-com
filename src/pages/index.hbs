@@ -1,26 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=320,initial-scale=1">
-    <title>Hideki Yamamura [hidekiy.com]</title>
+{{#> layouts/base title="Hideki Yamamura [hidekiy.com]" }}
+{{#*inline "head-block"}}
     <link rel="stylesheet" href="index.css">
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WV6MQS');</script>
-    <!-- End Google Tag Manager -->
-    <link rel="author" href="https://plus.google.com/+HidekiYamamura">
-    <link rel="canonical" href="https://hidekiy.com/">
-</head>
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WV6MQS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
+    <meta name="viewport" content="width=320,initial-scale=1">
+{{/inline}}
+{{#*inline "hero-block"}}
     <div>
         <h1><a href="/">hidekiy.com</a></h1>
         <p>Welcome to the personal page of Hideki Yamamura!</p>
@@ -69,5 +52,5 @@
             </li>
         </ul>
     </div>
-</body>
-</html>
+{{/inline}}
+{{/layouts/base}}
