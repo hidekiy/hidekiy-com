@@ -19,8 +19,8 @@
   "homepage": "https://github.com/hidekiy/netlify-hidekiy.com#readme",
   "dependencies": {},
   "devDependencies": {
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-compile-handlebars": "^0.6.1",
-    "rimraf": "^2.6.2"
+    "gulp-compile-handlebars": "^0.6.1"
   }
 }

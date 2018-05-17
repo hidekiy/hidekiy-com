@@ -1,13 +1,13 @@
 'use strict';
 const gulp = require('gulp');
-const rimraf = require('rimraf');
+const del = require('del');
 const handlebars = require('gulp-compile-handlebars');
 
-gulp.task('clean', cb => {
-    rimraf('dist', cb);
+gulp.task('clean', () => {
+    return del(['dist']);
 });
 
-gulp.task('handlebars', () => {
+gulp.task('handlebars', ['clean'], () => {
     return gulp.src('src/pages/**/*.html')
         .pipe(handlebars({}, {
             ignorePartials: true,
@@ -16,9 +16,11 @@ gulp.task('handlebars', () => {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('static', () => {
+gulp.task('static', ['clean'], () => {
     return gulp.src('src/static/**/*')
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['clean', 'handlebars', 'static']);
+gulp.task('build', ['handlebars', 'static']);
+
+gulp.task('default', ['build']);
