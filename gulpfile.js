@@ -1,18 +1,15 @@
 'use strict';
 const gulp = require('gulp');
 const del = require('del');
-const handlebars = require('gulp-compile-handlebars');
+const hb = require('gulp-hb');
 
 gulp.task('clean', () => {
     return del(['dist']);
 });
 
 gulp.task('handlebars', ['clean'], () => {
-    return gulp.src('src/pages/**/*.html')
-        .pipe(handlebars({}, {
-            ignorePartials: true,
-            batch : ['src/partials'],
-        }))
+    return gulp.src('src/posts/**/*.html')
+        .pipe(hb().partials('src/partials/**/*.hbs'))
         .pipe(gulp.dest('dist'));
 });
 

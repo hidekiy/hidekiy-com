@@ -21,6 +21,6 @@
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-compile-handlebars": "^0.6.1"
+    "gulp-hb": "^7.0.1"
   }
 }
