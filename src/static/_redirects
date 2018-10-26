@@ -5,4 +5,3 @@
 /tcp/twitter.html /work/twitter-stream
 /tmp/AE_PerlIsm.html /doc/AE_PerlIsm
 /tmp/unicode-steganography.html /work/unicode-steganography
-http://hidekiy.com/* https://hidekiy.com/:splat 301!
