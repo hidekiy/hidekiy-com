@@ -20,7 +20,7 @@
   "dependencies": {},
   "devDependencies": {
     "del": "^3.0.0",
-    "gulp": "^4.0.0",
-    "gulp-hb": "^7.0.1"
+    "gulp": "^4.0.2",
+    "gulp-hb": "^7.1.0"
   }
 }
