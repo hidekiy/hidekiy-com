@@ -8,7 +8,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('handlebars', gulp.series('clean', () => {
-    return gulp.src('src/posts/**/*.html')
+    return gulp.src('src/templates/**/*.html')
         .pipe(hb().partials('src/partials/**/*.hbs'))
         .pipe(gulp.dest('dist'));
 }));
