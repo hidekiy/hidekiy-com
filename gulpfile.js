@@ -4,8 +4,8 @@ const del = require('del');
 const hb = require('gulp-hb');
 const sitemap = require('gulp-sitemap');
 
-const siteUrl = 'https://hidekiy.com';
 const dest = 'dist';
+const siteUrl = 'https://hidekiy.com';
 
 gulp.task('clean', () => {
     return del(dest);
