@@ -7,15 +7,15 @@ body {
 }
 
 h1, h2, div, p {
-    margin: 0
+    margin: 0;
 }
 
 h1, h2 {
-    font-weight: normal
+    font-weight: normal;
 }
 
 a img {
-    border: 0
+    border: 0;
 }
 
 a {
@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 div.update, div.meta {
@@ -33,7 +33,7 @@ div.update, div.meta {
 }
 
 div.update {
-    border: 1px solid #bbb
+    border: 1px solid #bbb;
 }
 
 div.meta {
@@ -42,7 +42,7 @@ div.meta {
 }
 
 div.msg-main img {
-    float: left
+    float: left;
 }
 
 div.msg-main p {
@@ -55,7 +55,7 @@ p.msg-body {
 }
 
 p.msg-footer a {
-    color: #555
+    color: #555;
 }
 
 #controller {
@@ -70,18 +70,22 @@ p.msg-footer a {
 }
 
 #loading img, #loading span {
-    vertical-align: middle
+    vertical-align: middle;
 }
 
-/*#msg_container div { border-radius: 8px }
+/*
+#msg_container div {
+    border-radius: 8px;
+}
 */
+
 div.msg-frame {
     width: 50%;
     float: left;
 }
 
 #chart {
-    height: 100px
+    height: 100px;
 }
 
 #msg_container_a, #msg_container_b {
