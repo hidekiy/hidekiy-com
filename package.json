@@ -18,10 +18,10 @@
     "url": "https://github.com/hidekiy/netlify-hidekiy.com/issues"
   },
   "homepage": "https://github.com/hidekiy/netlify-hidekiy.com#readme",
-  "dependencies": {},
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-hb": "^8.0.0"
+    "gulp-hb": "^8.0.0",
+    "gulp-sitemap": "^7.6.0"
   }
 }
