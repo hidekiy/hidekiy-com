@@ -23,7 +23,7 @@ gulp.task('static', () => {
 });
 
 gulp.task('sitemap', () => {
-    return gulp.src('dist/**/*.html', {
+    return gulp.src(dist + '/**/*.html', {
             read: false
         })
         .pipe(sitemap({
