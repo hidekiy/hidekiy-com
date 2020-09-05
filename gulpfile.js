@@ -5,25 +5,25 @@ const hb = require('gulp-hb');
 const sitemap = require('gulp-sitemap');
 
 const siteUrl = 'https://hidekiy.com';
-const dist = 'dist';
+const dest = 'dist';
 
 gulp.task('clean', () => {
-    return del(dist);
+    return del(dest);
 });
 
 gulp.task('handlebars', () => {
     return gulp.src('src/templates/**/*.html')
         .pipe(hb().partials('src/partials/**/*.hbs'))
-        .pipe(gulp.dest(dist));
+        .pipe(gulp.dest(dest));
 });
 
 gulp.task('static', () => {
     return gulp.src('src/static/**/*')
-        .pipe(gulp.dest(dist));
+        .pipe(gulp.dest(dest));
 });
 
 gulp.task('sitemap', () => {
-    return gulp.src(dist + '/**/*.html', {
+    return gulp.src(dest + '/**/*.html', {
             read: false
         })
         .pipe(sitemap({
@@ -38,7 +38,7 @@ gulp.task('sitemap', () => {
                 }
             ]
         }))
-        .pipe(gulp.dest(dist));
+        .pipe(gulp.dest(dest));
 });
 
 gulp.task('build', gulp.series(gulp.parallel('handlebars', 'static'), 'sitemap'));
