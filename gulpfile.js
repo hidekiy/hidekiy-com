@@ -23,7 +23,7 @@ gulp.task('static', () => {
 });
 
 gulp.task('sitemap', () => {
-    return gulp.src(`${dest}/**/*.html`, {read: false})
+    return gulp.src(`${dest}/**/*.html`, {base: dest, read: false})
         .pipe(sitemap({
             siteUrl,
             mappings: [
