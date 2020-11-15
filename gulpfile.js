@@ -25,18 +25,16 @@ gulp.task('static', () => {
 });
 
 gulp.task('sitemap', () => {
-    return gulp.src(`${dest}/**/*.html`, {base: dest, read: false})
+    return gulp.src(`${dest}/**/*.html`, { base: dest, read: false })
         .pipe(sitemap({
             siteUrl,
-            mappings: [
-                {
-                    pages: ['**/*'],
-                    getLoc(siteUrl, loc, entry) {
-                        // Removes the file extension if it exists
-                        return loc.replace(/\.\w+$/, '');
-                    }
+            mappings: [{
+                pages: ['**/*'],
+                getLoc(siteUrl, loc, entry) {
+                    // Removes the file extension if it exists
+                    return loc.replace(/\.\w+$/, '');
                 }
-            ]
+            }]
         }))
         .pipe(gulp.dest(dest));
 });
@@ -52,9 +50,10 @@ gulp.task('htmlhint', () => {
 gulp.task('stylelint', () => {
     return gulp.src(`${dest}/**/*.css`)
         .pipe(stylelint({
-            reporters: [
-                {formatter: 'string', console: true}
-            ]
+            reporters: [{
+                formatter: 'string',
+                console: true
+            }]
         }));
 });
 
