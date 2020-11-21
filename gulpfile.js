@@ -51,8 +51,8 @@ gulp.task('stylelint', () => {
     return gulp.src(`${dest}/**/*.css`)
         .pipe(stylelint({
             reporters: [{
-                formatter: 'string',
-                console: true
+                console: true,
+                formatter: 'string'
             }]
         }));
 });
