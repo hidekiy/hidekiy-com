@@ -2,6 +2,7 @@
 const gulp = require('gulp');
 const del = require('del');
 const hb = require('gulp-hb');
+const fileInclude = require('gulp-file-include');
 const sitemap = require('gulp-sitemap');
 const htmlhint = require('gulp-htmlhint');
 const stylelint = require('gulp-stylelint');
@@ -24,6 +25,12 @@ gulp.task('static', () => {
         .pipe(gulp.dest(dest));
 });
 
+gulp.task('include', () => {
+    return gulp.src(`${dest}/**/*.html`)
+        .pipe(fileInclude())
+        .pipe(gulp.dest(dest));
+});
+
 gulp.task('sitemap', () => {
     return gulp.src(`${dest}/**/*.html`, { base: dest, read: false })
         .pipe(sitemap({
@@ -39,7 +46,7 @@ gulp.task('sitemap', () => {
         .pipe(gulp.dest(dest));
 });
 
-gulp.task('build', gulp.series(gulp.parallel('handlebars', 'static'), 'sitemap'));
+gulp.task('build', gulp.series(gulp.parallel('handlebars', 'static'), 'include', 'sitemap'));
 
 gulp.task('htmlhint', () => {
     return gulp.src(`${dest}/**/*.html`)

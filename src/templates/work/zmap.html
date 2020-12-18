@@ -1,6 +1,8 @@
 {{#> layouts/base title="zmap" }}
 {{#*inline "head-block"}}
-    <link rel="stylesheet" href="zmap.css">
+    <style>
+        @@include('zmap.css')
+    </style>
 {{/inline}}
 {{#*inline "hero-block"}}
     <div id="container"></div>
@@ -8,6 +10,8 @@
     <script src="https://www.google.com/jsapi"></script>
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyAeJaGgX0AkMaDSeNqQiH3TwqHzZnZu8Kg"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
-    <script src="zmap.js"></script>
+    <script>
+        @@include('zmap.js')
+    </script>
 {{/inline}}
 {{/layouts/base}}

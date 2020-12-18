@@ -1,6 +1,8 @@
 {{#> layouts/base title="Unicode ZWC Steganography" }}
 {{#*inline "head-block"}}
-    <link rel="stylesheet" href="unicode-steganography.css">
+    <style>
+        @@include('unicode-steganography.css')
+    </style>
 {{/inline}}
 {{#*inline "hero-block"}}
     <h1>Unicode ZWC Steganography</h1>
@@ -21,6 +23,8 @@
     </p>
     <p style="text-align:right"><a href="https://hidekiy.com/">hidekiy.com</a></p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
-    <script src="unicode-steganography.js"></script>
+    <script>
+        @@include('unicode-steganography.js')
+    </script>
 {{/inline}}
 {{/layouts/base}}
