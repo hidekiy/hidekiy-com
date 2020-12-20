@@ -27,7 +27,7 @@ gulp.task('static', () => {
 
 gulp.task('include', () => {
     return gulp.src(`${dest}/**/*.html`)
-        .pipe(fileInclude())
+        .pipe(fileInclude({indent: true}))
         .pipe(gulp.dest(dest));
 });
 
