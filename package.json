@@ -19,14 +19,14 @@
   },
   "homepage": "https://github.com/hidekiy/netlify-hidekiy.com#readme",
   "devDependencies": {
-    "del": "^5.1.0",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
-    "gulp-file-include": "^2.2.2",
+    "gulp-file-include": "^2.3.0",
     "gulp-hb": "^8.0.0",
-    "gulp-htmlhint": "^3.0.1",
-    "gulp-sitemap": "^7.6.0",
+    "gulp-htmlhint": "^4.0.1",
+    "gulp-sitemap": "^8.0.0",
     "gulp-stylelint": "^13.0.0",
-    "stylelint": "^13.7.2",
-    "stylelint-config-recommended": "^3.0.0"
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended": "^5.0.0"
   }
 }
