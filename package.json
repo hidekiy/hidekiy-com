@@ -26,7 +26,7 @@
     "gulp-htmlhint": "^4.0.1",
     "gulp-sitemap": "^8.0.0",
     "gulp-stylelint": "^13.0.0",
-    "stylelint": "^13.13.1",
+    "stylelint": "^15.0.0",
     "stylelint-config-recommended": "^5.0.0"
   }
 }
