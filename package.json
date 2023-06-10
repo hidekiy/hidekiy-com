@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hidekiy/netlify-hidekiy.com.git"
+    "url": "git+https://github.com/hidekiy/hidekiy-com.git"
   },
   "author": "",
   "license": "UNLICENSED",
   "private": true,
   "bugs": {
-    "url": "https://github.com/hidekiy/netlify-hidekiy.com/issues"
+    "url": "https://github.com/hidekiy/hidekiy-com/issues"
   },
-  "homepage": "https://github.com/hidekiy/netlify-hidekiy.com#readme",
+  "homepage": "https://github.com/hidekiy/hidekiy-com#readme",
   "devDependencies": {
     "del": "^6.0.0",
     "gulp": "^4.0.2",
