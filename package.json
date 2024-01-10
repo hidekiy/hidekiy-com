@@ -26,10 +26,10 @@
     "gulp-htmlhint": "^4.0.2",
     "gulp-sitemap": "^8.0.0",
     "gulp-stylelint": "^13.0.0",
-    "stylelint": "^15.10.2",
+    "stylelint": "^16.0.0",
     "stylelint-config-recommended": "^14.0.0"
   },
   "overrides": {
-    "stylelint": "^15.10.2"
+    "stylelint": "^16.0.0"
   }
 }
