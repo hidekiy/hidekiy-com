@@ -1,11 +1,12 @@
 'use strict';
-const gulp = require('gulp');
 const del = require('del');
-const hb = require('gulp-hb');
-const fileInclude = require('gulp-file-include');
-const sitemap = require('gulp-sitemap');
-const htmlhint = require('gulp-htmlhint');
-const stylelint = require('gulp-stylelint');
+const gulp = require('gulp');
+const gulpFileInclude = require('gulp-file-include');
+const gulpHb = require('gulp-hb');
+const gulpHtmlhint = require('gulp-htmlhint');
+const gulpSitemap = require('gulp-sitemap');
+const gulpStylelint = require('gulp-stylelint');
+const stylelint = require('stylelint');
 
 const dest = 'dist';
 const siteUrl = 'https://hidekiy.com';
@@ -16,7 +17,7 @@ gulp.task('clean', () => {
 
 gulp.task('handlebars', () => {
     return gulp.src('src/templates/**/*.html')
-        .pipe(hb().partials('src/partials/**/*.hbs'))
+        .pipe(gulpHb().partials('src/partials/**/*.hbs'))
         .pipe(gulp.dest(dest));
 });
 
@@ -27,21 +28,22 @@ gulp.task('static', () => {
 
 gulp.task('include', () => {
     return gulp.src(`${dest}/**/*.html`)
-        .pipe(fileInclude({indent: true}))
+        .pipe(gulpFileInclude({indent: true}))
         .pipe(gulp.dest(dest));
 });
 
 gulp.task('sitemap', () => {
     return gulp.src(`${dest}/**/*.html`, { base: dest, read: false })
-        .pipe(sitemap({
+        .pipe(gulpSitemap({
             siteUrl,
+            lastmod: new Date(0),
             mappings: [{
                 pages: ['**/*'],
                 getLoc(siteUrl, loc, entry) {
                     // Removes the file extension if it exists
                     return loc.replace(/\.\w+$/, '');
                 }
-            }]
+            }],
         }))
         .pipe(gulp.dest(dest));
 });
@@ -50,17 +52,18 @@ gulp.task('build', gulp.series(gulp.parallel('handlebars', 'static'), 'include',
 
 gulp.task('htmlhint', () => {
     return gulp.src(`${dest}/**/*.html`)
-        .pipe(htmlhint())
-        .pipe(htmlhint.failOnError());
+        .pipe(gulpHtmlhint())
+        .pipe(gulpHtmlhint.failOnError());
 });
 
-gulp.task('stylelint', () => {
+gulp.task('stylelint', async () => {
     return gulp.src(`${dest}/**/*.css`)
-        .pipe(stylelint({
+        .pipe(gulpStylelint({
+            quietDeprecationWarnings: true,
             reporters: [{
                 console: true,
-                formatter: 'string'
-            }]
+                formatter: await stylelint.formatters.string,
+            }],
         }));
 });
 
