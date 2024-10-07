@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/hidekiy/hidekiy-com#readme",
   "devDependencies": {
-    "del": "^6.0.0",
+    "del": "^8.0.0",
     "gulp": "^5.0.0",
     "gulp-file-include": "^2.3.0",
     "gulp-hb": "^8.0.0",
