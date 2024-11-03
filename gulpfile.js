@@ -1,5 +1,5 @@
 'use strict';
-const del = require('del');
+const { rimraf } = require('rimraf');
 const gulp = require('gulp');
 const gulpFileInclude = require('gulp-file-include');
 const gulpHb = require('gulp-hb');
@@ -12,7 +12,7 @@ const dest = 'dist';
 const siteUrl = 'https://hidekiy.com';
 
 gulp.task('clean', () => {
-    return del(dest);
+    return rimraf(dest);
 });
 
 gulp.task('handlebars', () => {
